@@ -1,10 +1,12 @@
-import Swal from "sweetalert2";
+import { FaVoteYea } from "react-icons/fa";
 import useAxiosPublicApi from "../../../Hooks/axiosPublicapi/useAxiosPublicApi";
+import Swal from "sweetalert2";
 import useAuth from "../../../Hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 
-const FeaturedProdcutCard = ({ product, refetche }) => {
+const TrendignSectionCard = ({ product, refetche }) => {
   const { _id, img, name, tags, votes } = product;
+  console.log(_id);
   const { user } = useAuth();
   const navigate = useNavigate();
 
@@ -38,35 +40,37 @@ const FeaturedProdcutCard = ({ product, refetche }) => {
   };
   return (
     <div>
-      <div className="card  bg-base-100 shadow-xl">
-        <figure>
-          <img src={img} className="h-52 w-full" alt="Shoes" />
-        </figure>
+      <div className="card w-96 bg-base-100 shadow-xl ">
         <div className="card-body">
-          <h2 className="card-title">
-            {name}
-            <div className="badge badge-secondary">{votes}</div>
-          </h2>
-          <div className="flex gap-2  ">
-            {tags?.map((data) => (
-              <span
-                className="bg-gray-400 px-2 p-1 text-xs text-white rounded-md "
-                key={data}
-              >
-                {data}
-              </span>
-            ))}
+          <div className="flex justify-between">
+            <h2 className="card-title">{name}</h2>
+            <button
+              className="flex gap-1 items-center bg-black text-white rounded-lg px-2 py-1"
+              onClick={() => handleVoteClick(_id)}
+            >
+              <FaVoteYea></FaVoteYea> Vote
+            </button>
           </div>
-
-          <div className="card-actions justify-end">
-            <div className="badge badge-outline">
-              <button onClick={() => handleVoteClick(_id)}>Vote</button>
-            </div>
+          <div className="flex justify-between">
+            <p>
+              {tags.map((data) => (
+                <span
+                  className="bg-slate-400 text-white px-2 py-1 mr-1 rounded-md"
+                  key={data}
+                >
+                  {data}
+                </span>
+              ))}
+            </p>
+            <div className="badge badge-info text-white">{votes}</div>
           </div>
         </div>
+        <figure>
+          <img src={img} alt="Shoes" />
+        </figure>
       </div>
     </div>
   );
 };
 
-export default FeaturedProdcutCard;
+export default TrendignSectionCard;

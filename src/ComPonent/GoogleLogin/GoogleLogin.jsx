@@ -10,7 +10,7 @@ const GoogleLogin = () => {
       .then((res) => {
         Swal.fire({
           title: " success",
-          text: "User created successfull",
+          text: "User  successfull",
           icon: "success",
         });
         navigate("/");
@@ -18,7 +18,7 @@ const GoogleLogin = () => {
       .catch((err) => {
         Swal.fire({
           title: " error",
-          text: "User not created ",
+          text: "User not login ",
           icon: "error",
         });
       });

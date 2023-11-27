@@ -1,13 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
 import Sesctiontitle from "../../../ComPonent/SectionTitle/Sesctiontitle";
 import useAxiosPublicApi from "../../../Hooks/axiosPublicapi/useAxiosPublicApi";
+import FeaturedProdcutCard from "../FeaturedSeciton/FeaturedProdcutCard";
+import TrendignSectionCard from "./TrendignSectionCard";
 
 const TrendingProduct = () => {
-  const axiosPublic = useAxiosPublicApi();
+  const axiosPublice = useAxiosPublicApi();
   const { data: tranding = [], refetch } = useQuery({
-    queryKey: ["featuredSection"],
+    queryKey: ["tranding"],
     queryFn: async () => {
-      const res = await axiosPublic.get("/allProdcut/tranding");
+      const res = await axiosPublice.get("/allProdcut/trandign/tranding");
       return res.data;
     },
   });
@@ -15,6 +17,15 @@ const TrendingProduct = () => {
   return (
     <div>
       <Sesctiontitle heading={"Trending Products"}></Sesctiontitle>
+      <div className="grid grid-cols-3 gap-3">
+        {tranding.map((prodcut) => (
+          <TrendignSectionCard
+            key={prodcut._id}
+            product={prodcut}
+            refetche={refetch}
+          ></TrendignSectionCard>
+        ))}
+      </div>
     </div>
   );
 };

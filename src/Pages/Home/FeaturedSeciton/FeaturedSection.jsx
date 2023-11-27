@@ -7,7 +7,7 @@ const FeaturedSection = () => {
   const { data: featuredSectionData = [], refetch } = useQuery({
     queryKey: ["featuredSection"],
     queryFn: async () => {
-      const res = await axiosPublic.get("/allProdcut/featured");
+      const res = await axiosPublic.get("/allProdcut/featured/featured");
       return res.data;
     },
   });
