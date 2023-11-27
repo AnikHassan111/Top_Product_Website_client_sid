@@ -23,7 +23,8 @@
     "tags": ["audio", "headphones", "technology"],
     "votes": 25,
     "description": "Wireless noise-canceling headphones with industry-leading sound quality and long battery life.",
-    "externalLink": "https://example.com/product-sony-wh-1000xm4"
+    "externalLink": "https://example.com/product-sony-wh-1000xm4",
+    "featured": "featured"
   },
   {
     "img": "https://i.ibb.co/sKsY59c/maxim-hopman-Hin-rzh-Od-Ws-unsplash.jpg",
@@ -76,7 +77,8 @@
     "votes": 0,
     "description": "High-performance quadcopter drone with 4K camera for professional aerial photography and videography.",
     "externalLink": "https://example.com/drone1",
-    "trending": "tranding"
+    "trending": "tranding",
+    "featured": "featured"
   },
   {
     "img": "https://i.ibb.co/kGs2h1H/fitnish-media-q8-Emkm9ooig-unsplash.jpg",
@@ -94,7 +96,8 @@
     "tags": ["mobile", "smartphone", "technology"],
     "votes": 25,
     "description": "Cutting-edge smartphone with a stunning display and powerful Exynos processor.",
-    "externalLink": "https://example.com/product-samsung-galaxy-s21"
+    "externalLink": "https://example.com/product-samsung-galaxy-s21",
+    "featured": "featured"
   },
   {
     "img": "https://i.ibb.co/vzDqj3b/miguel-tomas-0c-Tb-Qr-En-RLo-unsplash.jpg",
@@ -102,7 +105,8 @@
     "tags": ["mobile", "smartphone", "technology"],
     "votes": 15,
     "description": "Flagship iPhone with 5G capability, A14 Bionic chip, and Ceramic Shield front cover.",
-    "externalLink": "https://example.com/product-apple-iphone-12"
+    "externalLink": "https://example.com/product-apple-iphone-12",
+    "featured": "featured"
   },
   {
     "img": "https://i.ibb.co/tQSs9db/franco-gancis-Js-V51nox-RCQ-unsplash.jpg",

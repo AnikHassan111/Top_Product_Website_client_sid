@@ -7,23 +7,20 @@ const FeaturedSection = () => {
   const { data: featuredSectionData = [], refetch } = useQuery({
     queryKey: ["featuredSection"],
     queryFn: async () => {
-      const res = await axiosPublic.get("/featuredProduct");
+      const res = await axiosPublic.get("/allProdcut/featured");
       return res.data;
     },
   });
-  console.log(featuredSectionData);
+  console.log("featured item", featuredSectionData);
   return (
     <div className="grid grid-cols-4 gap-2 my-10">
-      {/* {featuredSectionData?.map(
-        (product) => (
-          <FeaturedProdcutCard
-            refetche={refetch}
-            key={product._id}
-            product={product}
-          ></FeaturedProdcutCard>
-        )
-        // console.log(product)
-      )} */}
+      {featuredSectionData.map((prodcut) => (
+        <FeaturedProdcutCard
+          key={prodcut._id}
+          product={prodcut}
+          refetche={refetch}
+        ></FeaturedProdcutCard>
+      ))}
     </div>
   );
 };
