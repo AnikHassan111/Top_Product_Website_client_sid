@@ -1,5 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom";
 import Navvar from "../../Shared/Navvar/Navvar";
+import Footer from "../../Shared/Footer/Footer";
 
 const MainPage = () => {
   const locatin = useLocation();
@@ -9,6 +10,7 @@ const MainPage = () => {
     <div>
       {loginandregister || <Navvar></Navvar>}
       <Outlet></Outlet>
+      {loginandregister || <Footer></Footer>}
     </div>
   );
 };

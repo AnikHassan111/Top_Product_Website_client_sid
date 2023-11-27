@@ -1,0 +1,238 @@
+[
+  {
+    "img": "https://i.ibb.co/CsPRN3g/tran-quang-thien-6cb-Flo-PI2o-unsplash.jpg",
+    "name": "Oppo",
+    "tags": ["mobile", "smartphone", "technology"],
+    "votes": 0,
+    "description": "Flagship smartphone with cutting-edge features and powerful performance.",
+    "externalLink": "https://example.com/product1",
+    "trending": "tranding"
+  },
+  {
+    "img": "https://i.ibb.co/j4B2mmP/hikarinoshita-hikari-1-Omr2-Y0sj-U8-unsplash.jpg",
+    "name": "Fujifilm X-T4",
+    "tags": ["camera", "photography", "technology"],
+    "votes": 20,
+    "description": "APS-C mirrorless camera with in-body stabilization, 240fps slow-motion video, and retro design.",
+    "externalLink": "https://example.com/product-fujifilm-x-t4"
+  },
+
+  {
+    "img": "https://i.ibb.co/hF0hkLv/varad-murti-Gx-Wwj-Oj-J5-Ss-unsplash.jpg",
+    "name": "Sony WH-1000XM4",
+    "tags": ["audio", "headphones", "technology"],
+    "votes": 25,
+    "description": "Wireless noise-canceling headphones with industry-leading sound quality and long battery life.",
+    "externalLink": "https://example.com/product-sony-wh-1000xm4"
+  },
+  {
+    "img": "https://i.ibb.co/sKsY59c/maxim-hopman-Hin-rzh-Od-Ws-unsplash.jpg",
+    "name": "UltraBook Pro",
+    "tags": ["laptop", "ultrabook", "electronics"],
+    "votes": 0,
+    "description": "Powerful and sleek ultrabook with high-resolution display and fast SSD storage.",
+    "externalLink": "https://example.com/product1",
+    "trending": "tranding"
+  },
+  {
+    "img": "https://i.ibb.co/JsfqVdn/remy-gieling-Zf0m-Pf4l-G-U-unsplash.jpg",
+    "name": "VR Headset 360",
+    "tags": ["virtual reality", "headset", "gaming"],
+    "votes": 0,
+    "description": "High-end VR headset with ultra-clear OLED displays, precise motion tracking, and immersive spatial audio for a premium VR experience.",
+    "externalLink": "https://example.com/vr1",
+    "trending": "tranding"
+  },
+  {
+    "img": "https://i.ibb.co/j4B2mmP/hikarinoshita-hikari-1-Omr2-Y0sj-U8-unsplash.jpg",
+    "name": "Fujifilm X-T4",
+    "tags": ["camera", "photography", "technology"],
+    "votes": 20,
+    "description": "APS-C mirrorless camera with in-body stabilization, 240fps slow-motion video, and retro design.",
+    "externalLink": "https://example.com/product-fujifilm-x-t4"
+  },
+
+  {
+    "img": "https://i.ibb.co/hF0hkLv/varad-murti-Gx-Wwj-Oj-J5-Ss-unsplash.jpg",
+    "name": "Sony WH-1000XM4",
+    "tags": ["audio", "headphones", "technology"],
+    "votes": 25,
+    "description": "Wireless noise-canceling headphones with industry-leading sound quality and long battery life.",
+    "externalLink": "https://example.com/product-sony-wh-1000xm4"
+  },
+  {
+    "img": "https://i.ibb.co/KGmFJ39/nordwood-themes-F3-Dde-9thd8-unsplash.jpg",
+    "name": "Sony Camera",
+    "tags": ["camers", "smart camars", "technology"],
+    "votes": 0,
+    "description": "Professional DSLR camera with a full-frame sensor, advanced autofocus, and 4K video recording capabilities.",
+    "externalLink": "https://example.com/camera1",
+    "trending": "tranding"
+  },
+  {
+    "img": "https://i.ibb.co/BGDS35q/jason-blackeye-XYrjl3j7smo-unsplash.jpg",
+    "name": "Drone Explorer",
+    "tags": ["drone", "exploration", "technology"],
+    "votes": 0,
+    "description": "High-performance quadcopter drone with 4K camera for professional aerial photography and videography.",
+    "externalLink": "https://example.com/drone1",
+    "trending": "tranding"
+  },
+  {
+    "img": "https://i.ibb.co/kGs2h1H/fitnish-media-q8-Emkm9ooig-unsplash.jpg",
+    "name": "Fitness Tracker Plus",
+    "tags": ["wearable", "fitness", "health"],
+    "votes": 0,
+    "description": "Advanced fitness tracker with heart rate monitoring, GPS, and sleep tracking for comprehensive health insights.",
+    "externalLink": "https://example.com/fitnesstracker1",
+    "trending": "tranding"
+  },
+
+  {
+    "img": "https://i.ibb.co/6PdCdw0/anh-nhat-Uk-Bwa-ZEh-PFo-unsplash.jpg",
+    "name": "Samsung Galaxy S21",
+    "tags": ["mobile", "smartphone", "technology"],
+    "votes": 25,
+    "description": "Cutting-edge smartphone with a stunning display and powerful Exynos processor.",
+    "externalLink": "https://example.com/product-samsung-galaxy-s21"
+  },
+  {
+    "img": "https://i.ibb.co/vzDqj3b/miguel-tomas-0c-Tb-Qr-En-RLo-unsplash.jpg",
+    "name": "Apple iPhone 12",
+    "tags": ["mobile", "smartphone", "technology"],
+    "votes": 15,
+    "description": "Flagship iPhone with 5G capability, A14 Bionic chip, and Ceramic Shield front cover.",
+    "externalLink": "https://example.com/product-apple-iphone-12"
+  },
+  {
+    "img": "https://i.ibb.co/tQSs9db/franco-gancis-Js-V51nox-RCQ-unsplash.jpg",
+    "name": "Google Pixel 5",
+    "tags": ["mobile", "smartphone", "technology"],
+    "votes": 12,
+    "description": "Pixel phone with Night Sight camera, 90Hz display, and Google Assistant integration.",
+    "externalLink": "https://example.com/product-google-pixel-5"
+  },
+  {
+    "img": "https://i.ibb.co/5x0zshR/vinit-vispute-enq-Ya-ZPSDj-Q-unsplash.jpg",
+    "name": "OnePlus 9",
+    "tags": ["mobile", "smartphone", "technology"],
+    "votes": 18,
+    "description": "Flagship killer with Hasselblad camera, Snapdragon 888, and fast charging.",
+    "externalLink": "https://example.com/product-oneplus-9"
+  },
+  {
+    "img": "https://i.ibb.co/xsPFKk7/new-smartphone-balancing-with-podium-1.jpg",
+    "name": "Xiaomi Mi 11",
+    "tags": ["mobile", "smartphone", "technology"],
+    "votes": 20,
+    "description": "Premium flagship with Snapdragon 888, AMOLED display, and versatile camera setup.",
+    "externalLink": "https://example.com/product-xiaomi-mi-11"
+  },
+  {
+    "img": "https://i.ibb.co/BrKXRM7/mike-meyers-r-GBtpa-BQ3-LA-unsplash.jpg",
+    "name": "Sony Xperia 1 III",
+    "tags": ["mobile", "smartphone", "technology"],
+    "votes": 8,
+    "description": "Photography-focused phone with Zeiss optics, 120Hz display, and 5G support.",
+    "externalLink": "https://example.com/product-sony-xperia-1-iii"
+  },
+  {
+    "img": "https://i.ibb.co/gV0J06Q/jan-kopriva-zd4-Pns9mwi4-unsplash.jpg",
+    "name": "Nikon Z7",
+    "tags": ["camera", "photography", "technology"],
+    "votes": 15,
+    "description": "Mirrorless camera with high-resolution sensor, 4K video, and in-body stabilization.",
+    "externalLink": "https://example.com/product-nikon-z7"
+  },
+  {
+    "img": "https://i.ibb.co/DzRSmRQ/robin-mcskelly-E-e-RX8-Phnto-unsplash.jpg",
+    "name": "Canon EOS R5",
+    "tags": ["camera", "photography", "technology"],
+    "votes": 12,
+    "description": "Full-frame mirrorless camera with 8K video, Dual Pixel autofocus, and advanced image processing.",
+    "externalLink": "https://example.com/product-canon-eos-r5"
+  },
+  {
+    "img": "https://i.ibb.co/vZQfxrr/trung-thanh-q-Oka-DECt-J5-Y-unsplash.jpg",
+    "name": "Sony Alpha a7 III",
+    "tags": ["camera", "photography", "technology"],
+    "votes": 18,
+    "description": "Versatile mirrorless camera with impressive low-light performance, 4K video, and fast autofocus.",
+    "externalLink": "https://example.com/product-sony-alpha-a7-iii"
+  },
+  {
+    "img": "https://i.ibb.co/j4B2mmP/hikarinoshita-hikari-1-Omr2-Y0sj-U8-unsplash.jpg",
+    "name": "Fujifilm X-T4",
+    "tags": ["camera", "photography", "technology"],
+    "votes": 20,
+    "description": "APS-C mirrorless camera with in-body stabilization, 240fps slow-motion video, and retro design.",
+    "externalLink": "https://example.com/product-fujifilm-x-t4"
+  },
+
+  {
+    "img": "https://i.ibb.co/hF0hkLv/varad-murti-Gx-Wwj-Oj-J5-Ss-unsplash.jpg",
+    "name": "Sony WH-1000XM4",
+    "tags": ["audio", "headphones", "technology"],
+    "votes": 25,
+    "description": "Wireless noise-canceling headphones with industry-leading sound quality and long battery life.",
+    "externalLink": "https://example.com/product-sony-wh-1000xm4"
+  },
+  {
+    "img": "https://i.ibb.co/vzDqj3b/miguel-tomas-0c-Tb-Qr-En-RLo-unsplash.jpg",
+    "name": "Apple iPhone 12",
+    "tags": ["mobile", "smartphone", "technology"],
+    "votes": 15,
+    "description": "Flagship iPhone with 5G capability, A14 Bionic chip, and Ceramic Shield front cover.",
+    "externalLink": "https://example.com/product-apple-iphone-12"
+  },
+  {
+    "img": "https://i.ibb.co/tQSs9db/franco-gancis-Js-V51nox-RCQ-unsplash.jpg",
+    "name": "Google Pixel 5",
+    "tags": ["mobile", "smartphone", "technology"],
+    "votes": 12,
+    "description": "Pixel phone with Night Sight camera, 90Hz display, and Google Assistant integration.",
+    "externalLink": "https://example.com/product-google-pixel-5"
+  },
+  {
+    "img": "https://i.ibb.co/71VXhsK/jason-leung-x-R4-JHzr69-Og-unsplash.jpg",
+    "name": "Bose QuietComfort 35 II",
+    "tags": ["audio", "headphones", "technology"],
+    "votes": 20,
+    "description": "Over-ear headphones with excellent noise cancellation, comfortable fit, and built-in voice assistants.",
+    "externalLink": "https://example.com/product-bose-quietcomfort-35-ii"
+  },
+  {
+    "img": "https://i.ibb.co/Dg4Wqdv/claudio-schwarz-l-EFCu-Hd8-Ri-I-unsplash.jpg",
+    "name": "Apple AirPods Pro",
+    "tags": ["audio", "earbuds", "technology"],
+    "votes": 18,
+    "description": "True wireless earbuds with active noise cancellation, adaptive EQ, and sweat and water resistance.",
+    "externalLink": "https://example.com/product-apple-airpods-pro"
+  },
+  {
+    "img": "https://i.ibb.co/JkQmGXy/ervo-rocks-Zam8-Tv-Eg-N5o-unsplash.jpg",
+    "name": "Sennheiser HD 660 S",
+    "tags": ["audio", "headphones", "technology"],
+    "votes": 15,
+    "description": "Open-back over-ear headphones with high-quality sound reproduction and comfortable design.",
+    "externalLink": "https://example.com/product-sennheiser-hd-660-s"
+  },
+  {
+    "img": "https://i.ibb.co/JsfqVdn/remy-gieling-Zf0m-Pf4l-G-U-unsplash.jpg",
+    "name": "VR Headset 360",
+    "tags": ["virtual reality", "headset", "gaming"],
+    "votes": 0,
+    "description": "High-end VR headset with ultra-clear OLED displays, precise motion tracking, and immersive spatial audio for a premium VR experience.",
+    "externalLink": "https://example.com/vr1",
+    "trending": "tranding"
+  },
+  {
+    "img": "https://i.ibb.co/KGmFJ39/nordwood-themes-F3-Dde-9thd8-unsplash.jpg",
+    "name": "Sony Camera",
+    "tags": ["camers", "smart camars", "technology"],
+    "votes": 0,
+    "description": "Professional DSLR camera with a full-frame sensor, advanced autofocus, and 4K video recording capabilities.",
+    "externalLink": "https://example.com/camera1",
+    "trending": "tranding"
+  }
+]
