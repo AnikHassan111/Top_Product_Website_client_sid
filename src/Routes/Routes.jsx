@@ -5,6 +5,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Product from "../Pages/Product/Product";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import ProductDetails from "../Pages/Product/ProductDetails/ProductDetails";
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path: "prodcutdetais/:id",
-        element: <Register></Register>,
+        element: <ProductDetails></ProductDetails>,
       },
     ],
   },
