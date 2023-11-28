@@ -61,7 +61,7 @@ const MyProductCard = ({ product, index, refetch }) => {
       <td>{votes}</td>
       <td>{status}</td>
       <td className="text-xl cursor-pointer">
-        <Link to={"/dashboard/myProductUpdate"}>
+        <Link to={`/dashboard/myProductUpdate/${_id}`}>
           <GrUpgrade />
         </Link>
       </td>

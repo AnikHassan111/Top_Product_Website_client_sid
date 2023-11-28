@@ -2,6 +2,9 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { TagsInput } from "react-tag-input-component";
 import Sesctiontitle from "../../../ComPonent/SectionTitle/Sesctiontitle";
+import useAxiosSecureApi from "../../../Hooks/axiosSecureapi/useAxiosSecureApi";
+import { useQuery } from "@tanstack/react-query";
+import { useParams } from "react-router-dom";
 
 const ProductUpdate = () => {
   const [selected, setSelected] = useState([]);
@@ -11,6 +14,18 @@ const ProductUpdate = () => {
     reset,
     formState: { errors },
   } = useForm();
+
+  const axiosSecure = useAxiosSecureApi();
+  const { id } = useParams();
+  const { data: ownerproduct } = useQuery({
+    queryKey: ["updateOwnerdata"],
+    queryFn: async () => {
+      const res = await axiosSecure.get(`/ownerProductUpdate/${id}`);
+      return res.data;
+    },
+  });
+  const { img, name, tags, description, externalLink } = ownerproduct;
+
   const onSubmit = (data) => {};
   return (
     <div>
