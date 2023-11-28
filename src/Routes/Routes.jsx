@@ -60,6 +60,10 @@ const router = createBrowserRouter([
         path: "myProduct",
         element: <MyProduct></MyProduct>,
       },
+      {
+        path: "myProductUpdate",
+        element: <MyProduct></MyProduct>,
+      },
     ],
   },
 ]);
