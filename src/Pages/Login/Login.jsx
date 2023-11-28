@@ -7,6 +7,8 @@ import GoogleLogin from "../../ComPonent/GoogleLogin/GoogleLogin";
 const Login = () => {
   const { singIn } = useAuth();
   const location = useLocation();
+
+  const goto = location.state.pathname || "/";
   const navigate = useNavigate();
   const {
     register,
@@ -26,7 +28,7 @@ const Login = () => {
           icon: "success",
         });
         reset();
-        navigate("/");
+        navigate(goto);
       })
       .catch((err) => {
         console.log(err);
@@ -94,7 +96,7 @@ const Login = () => {
             />
           </div>
         </form>
-        <GoogleLogin></GoogleLogin>
+        <GoogleLogin goto={goto}></GoogleLogin>
       </section>
     </div>
   );

@@ -82,7 +82,7 @@ const Navvar = () => {
         <div className="navbar-end">
           {user ? (
             <div className="dropdown">
-              <div tabIndex={0} className=" w-10 h-10 ">
+              <div tabIndex={0} className=" w-10 h-10 cursor-pointer">
                 <img src={user.photoURL} className="rounded-full" alt="" />
               </div>
               <ul className="dropdown-content z-[1]  p-2 shadow bg-base-100 rounded-box w-52">

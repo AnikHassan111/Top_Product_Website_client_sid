@@ -2,7 +2,7 @@ import Swal from "sweetalert2";
 import useAuth from "../../Hooks/useAuth";
 import { FaGoogle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-const GoogleLogin = () => {
+const GoogleLogin = ({ goto }) => {
   const { googleLogin } = useAuth();
   const navigate = useNavigate();
   const handleGoogle = () => {
@@ -13,7 +13,7 @@ const GoogleLogin = () => {
           text: "User login successfull",
           icon: "success",
         });
-        navigate("/");
+        navigate(goto);
       })
       .catch((err) => {
         Swal.fire({

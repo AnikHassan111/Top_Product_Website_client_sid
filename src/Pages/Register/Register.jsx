@@ -121,8 +121,13 @@ const Register = () => {
               )}
               {errors.password?.type == "pattern" && (
                 <span className="text-red-500">
-                  Password Sholud be 8 chacther and spacial chacther and
-                  uppercase number
+                  Password Sholud be spacial chacther and uppercase letter and
+                  number
+                </span>
+              )}
+              {errors.password?.type == "minLength" && (
+                <span className="text-red-500">
+                  Password Sholud be 6 chacther
                 </span>
               )}
             </div>
