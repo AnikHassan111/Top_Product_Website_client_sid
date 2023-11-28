@@ -1,10 +1,10 @@
+import { Link, useNavigate } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
+import useAxiosPublicApi from "../../Hooks/axiosPublicapi/useAxiosPublicApi";
 import Swal from "sweetalert2";
-import useAxiosPublicApi from "../../../Hooks/axiosPublicapi/useAxiosPublicApi";
-import useAuth from "../../../Hooks/useAuth";
-import { useNavigate } from "react-router-dom";
 import { FaVoteYea } from "react-icons/fa";
 
-const FeaturedProdcutCard = ({ product, refetche }) => {
+const ProdcutCard = ({ product, refetche }) => {
   const { _id, img, name, tags, votes } = product;
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -39,14 +39,14 @@ const FeaturedProdcutCard = ({ product, refetche }) => {
   };
   return (
     <div>
-      <div className="card  bg-base-100 shadow-xl">
+      <div className="card flex flex-grow   bg-base-100 shadow-xl">
         <figure>
           <img src={img} className="h-52 w-full" alt="Shoes" />
         </figure>
-        <div className="card-body">
+        <div className="card-body flex-grow">
           <h2 className="card-title">
             {name}
-            <div className="badge badge-secondary">{votes}</div>
+            <div className="badge badge-neutral">{votes}</div>
           </h2>
           <div className="flex gap-2  ">
             {tags?.map((data) => (
@@ -58,15 +58,22 @@ const FeaturedProdcutCard = ({ product, refetche }) => {
               </span>
             ))}
           </div>
-
-          <div className="card-actions justify-end">
-            <div className="badge badge-outline ">
-              <button
-                className="flex items-center gap-2"
-                onClick={() => handleVoteClick(_id)}
-              >
-                <FaVoteYea></FaVoteYea> Vote
-              </button>
+          <div className="flex items-center justify-between mt-3">
+            <Link
+              to={`/prodcutdetais/${_id}`}
+              className="py-1 px-2 bg-slate-900 text-white rounded-lg cursor-pointer "
+            >
+              Show Details
+            </Link>
+            <div className="card-actions justify-end">
+              <div className="badge badge-outline ">
+                <button
+                  className="flex items-center gap-2"
+                  onClick={() => handleVoteClick(_id)}
+                >
+                  <FaVoteYea></FaVoteYea> Vote
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -75,4 +82,4 @@ const FeaturedProdcutCard = ({ product, refetche }) => {
   );
 };
 
-export default FeaturedProdcutCard;
+export default ProdcutCard;

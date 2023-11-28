@@ -10,7 +10,7 @@ const GoogleLogin = () => {
       .then((res) => {
         Swal.fire({
           title: " success",
-          text: "User  successfull",
+          text: "User login successfull",
           icon: "success",
         });
         navigate("/");

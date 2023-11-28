@@ -3,6 +3,7 @@ import Sesctiontitle from "../../../ComPonent/SectionTitle/Sesctiontitle";
 import useAxiosPublicApi from "../../../Hooks/axiosPublicapi/useAxiosPublicApi";
 import FeaturedProdcutCard from "../FeaturedSeciton/FeaturedProdcutCard";
 import TrendignSectionCard from "./TrendignSectionCard";
+import { Link } from "react-router-dom";
 
 const TrendingProduct = () => {
   const axiosPublice = useAxiosPublicApi();
@@ -25,6 +26,14 @@ const TrendingProduct = () => {
             refetche={refetch}
           ></TrendignSectionCard>
         ))}
+      </div>
+      <div className="flex justify-center my-4">
+        <Link
+          to={"/product"}
+          className=" badge-info text-white py-2 px-4 rounded-lg  "
+        >
+          Show All Product
+        </Link>
       </div>
     </div>
   );
