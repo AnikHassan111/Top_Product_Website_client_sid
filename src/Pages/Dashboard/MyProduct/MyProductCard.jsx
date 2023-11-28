@@ -1,5 +1,7 @@
 import { FaTrash } from "react-icons/fa";
 import useAxiosSecureApi from "../../../Hooks/axiosSecureapi/useAxiosSecureApi";
+import Swal from "sweetalert2";
+import { GrUpgrade } from "react-icons/gr";
 
 const MyProductCard = ({ product, index, refetch }) => {
   const {
@@ -21,23 +23,45 @@ const MyProductCard = ({ product, index, refetch }) => {
 
   const axiosSecure = useAxiosSecureApi();
 
-  //   const handleDelete = (id) => {
-  //     axiosSecure
-  //       .delete(`/myproductDelete/${id}`)
-  //       .then((res) => {
-  //         console.log(res);
-  //       })
-  //       .catch((err) => {
-  //         console.log(err);
-  //       });
-  //   };
+  const handleDelete = (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't to Delete this product",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axiosSecure
+          .delete(`/myproductDelete/${id}`)
+          .then((res) => {
+            // console.log(res);
+            if (res.data.deletedCount > 0) {
+              Swal.fire({
+                title: " Success",
+                text: "Your Product Add SuccessFully ",
+                icon: "success",
+              });
+              refetch();
+            }
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+    });
+  };
   return (
     <tr key={product._id}>
       <th>{index + 1}</th>
       <td>{name}</td>
       <td>{votes}</td>
       <td>{status}</td>
-      <td>update</td>
+      <td className="text-xl cursor-pointer">
+        <GrUpgrade />
+      </td>
       <td className="cursor-pointer" onClick={() => handleDelete(_id)}>
         <FaTrash className="text-red-500"> </FaTrash>
       </td>

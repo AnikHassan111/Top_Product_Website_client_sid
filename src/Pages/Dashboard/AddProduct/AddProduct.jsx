@@ -4,10 +4,12 @@ import { TagsInput } from "react-tag-input-component";
 import { useState } from "react";
 import useAxiosPublicApi from "../../../Hooks/axiosPublicapi/useAxiosPublicApi";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const AddProduct = () => {
   const [selected, setSelected] = useState([]);
   const { user } = useAuth();
+  const navigate = useNavigate();
   const axiosPublicapi = useAxiosPublicApi();
   const {
     register,
@@ -43,6 +45,7 @@ const AddProduct = () => {
             text: "Your Product Add SuccessFully ",
             icon: "success",
           });
+          navigate("/dashboard/myProduct");
         }
       })
       .catch((err) => {
