@@ -2,6 +2,7 @@ import { FaTrash } from "react-icons/fa";
 import useAxiosSecureApi from "../../../Hooks/axiosSecureapi/useAxiosSecureApi";
 import Swal from "sweetalert2";
 import { GrUpgrade } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
 const MyProductCard = ({ product, index, refetch }) => {
   const {
@@ -60,7 +61,9 @@ const MyProductCard = ({ product, index, refetch }) => {
       <td>{votes}</td>
       <td>{status}</td>
       <td className="text-xl cursor-pointer">
-        <GrUpgrade />
+        <Link to={"/dashboard/myProductUpdate"}>
+          <GrUpgrade />
+        </Link>
       </td>
       <td className="cursor-pointer" onClick={() => handleDelete(_id)}>
         <FaTrash className="text-red-500"> </FaTrash>

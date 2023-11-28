@@ -11,6 +11,7 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
 import MyProfile from "../Pages/Dashboard/MyProfile/MyProfile";
 import AddProduct from "../Pages/Dashboard/AddProduct/AddProduct";
 import MyProduct from "../Pages/Dashboard/MyProduct/MyProduct";
+import ProductUpdate from "../Pages/Product/ProductUpdate/ProductUpdate";
 
 const router = createBrowserRouter([
   {
@@ -62,7 +63,7 @@ const router = createBrowserRouter([
       },
       {
         path: "myProductUpdate",
-        element: <MyProduct></MyProduct>,
+        element: <ProductUpdate></ProductUpdate>,
       },
     ],
   },
