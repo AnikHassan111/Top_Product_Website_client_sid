@@ -1,7 +1,7 @@
 import Swal from "sweetalert2";
 import useAxiosPublicApi from "../../../Hooks/axiosPublicapi/useAxiosPublicApi";
 import useAuth from "../../../Hooks/useAuth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaVoteYea } from "react-icons/fa";
 
 const FeaturedProdcutCard = ({ product, refetche }) => {
@@ -45,8 +45,12 @@ const FeaturedProdcutCard = ({ product, refetche }) => {
         </figure>
         <div className="card-body">
           <h2 className="card-title">
-            {name}
-            <div className="badge badge-secondary">{votes}</div>
+            <Link to={`/prodcutdetais/${_id}`}> {name}</Link>
+            <div className="badge badge-secondary">
+              {" "}
+              <FaVoteYea className="mr-2"></FaVoteYea>
+              {votes}
+            </div>
           </h2>
           <div className="flex gap-2  ">
             {tags?.map((data) => (
@@ -65,7 +69,7 @@ const FeaturedProdcutCard = ({ product, refetche }) => {
                 className="flex items-center gap-2"
                 onClick={() => handleVoteClick(_id)}
               >
-                <FaVoteYea></FaVoteYea> Vote
+                Vote
               </button>
             </div>
           </div>

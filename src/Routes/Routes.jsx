@@ -6,6 +6,11 @@ import Register from "../Pages/Register/Register";
 import Product from "../Pages/Product/Product";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import ProductDetails from "../Pages/Product/ProductDetails/ProductDetails";
+import ProductReview from "../Pages/Product/ProductReview/ProductReview";
+import Dashboard from "../Pages/Dashboard/Dashboard";
+import MyProfile from "../Pages/Dashboard/MyProfile/MyProfile";
+import AddProduct from "../Pages/Dashboard/AddProduct/AddProduct";
+import MyProduct from "../Pages/Dashboard/MyProduct/MyProduct";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +37,28 @@ const router = createBrowserRouter([
       {
         path: "prodcutdetais/:id",
         element: <ProductDetails></ProductDetails>,
+      },
+      {
+        path: "productReview/:id",
+        element: <ProductReview></ProductReview>,
+      },
+    ],
+  },
+  {
+    path: "dashboard",
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: "myprofile",
+        element: <MyProfile></MyProfile>,
+      },
+      {
+        path: "addProduct",
+        element: <AddProduct></AddProduct>,
+      },
+      {
+        path: "myProduct",
+        element: <MyProduct></MyProduct>,
       },
     ],
   },

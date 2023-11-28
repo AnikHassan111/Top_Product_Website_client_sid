@@ -2,11 +2,11 @@ import { FaVoteYea } from "react-icons/fa";
 import useAxiosPublicApi from "../../../Hooks/axiosPublicapi/useAxiosPublicApi";
 import Swal from "sweetalert2";
 import useAuth from "../../../Hooks/useAuth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const TrendignSectionCard = ({ product, refetche }) => {
   const { _id, img, name, tags, votes } = product;
-  console.log(_id);
+
   const { user } = useAuth();
   const navigate = useNavigate();
 
@@ -43,26 +43,31 @@ const TrendignSectionCard = ({ product, refetche }) => {
       <div className="card w-96 bg-base-100 shadow-xl ">
         <div className="card-body">
           <div className="flex justify-between">
-            <h2 className="card-title">{name}</h2>
+            <h2 className="card-title">
+              <Link to={`/prodcutdetais/${_id}`}>{name}</Link>
+            </h2>
             <button
               className="flex gap-1 items-center bg-black text-white rounded-lg px-2 py-1"
               onClick={() => handleVoteClick(_id)}
             >
-              <FaVoteYea></FaVoteYea> Vote
+              Vote
             </button>
           </div>
           <div className="flex justify-between">
             <p>
               {tags.map((data) => (
                 <span
-                  className="bg-slate-400 text-white px-2 py-1 mr-1 rounded-md"
+                  className="bg-slate-400 text-white px-2 text-xs py-1 mr-1 rounded-md"
                   key={data}
                 >
                   {data}
                 </span>
               ))}
             </p>
-            <div className="badge badge-info text-white">{votes}</div>
+            <div className="badge badge-info text-white">
+              <FaVoteYea className="mr-2"></FaVoteYea>
+              {votes}
+            </div>
           </div>
         </div>
         <figure>

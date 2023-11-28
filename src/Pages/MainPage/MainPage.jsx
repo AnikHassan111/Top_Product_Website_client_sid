@@ -6,11 +6,17 @@ const MainPage = () => {
   const locatin = useLocation();
   const loginandregister =
     locatin.pathname.includes("login") || locatin.pathname.includes("register");
+  const footer =
+    locatin.pathname.includes("login") ||
+    locatin.pathname.includes("register") ||
+    locatin.pathname.includes("prodcutdetais");
+
   return (
     <div>
       {loginandregister || <Navvar></Navvar>}
+
       <Outlet></Outlet>
-      {loginandregister || <Footer></Footer>}
+      {footer || <Footer></Footer>}
     </div>
   );
 };
