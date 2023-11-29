@@ -50,7 +50,7 @@ const Navvar = () => {
       <div className="navbar max-w-7xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className="btn  lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -66,13 +66,13 @@ const Navvar = () => {
                 />
               </svg>
             </div>
-            <ul className="menu text-white menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <ul className="menu  menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
               {navList}
             </ul>
           </div>
           <Link to={"/"}>
-            <div className="w-12 h-12 rounded-full overflow-hidden">
-              <img src={logo} className="w-12" alt="" />
+            <div className="w-12 h-12 rounded-full ml-32 md:ml-72 lg:ml-0  overflow-hidden">
+              <img src={logo} className="w-12  " alt="" />
             </div>
           </Link>
         </div>
@@ -85,7 +85,7 @@ const Navvar = () => {
               <div tabIndex={0} className=" w-10 h-10 cursor-pointer">
                 <img src={user.photoURL} className="rounded-full" alt="" />
               </div>
-              <ul className="dropdown-content z-[1]  p-2 shadow bg-base-100 rounded-box w-52 right-5">
+              <ul className="dropdown-content z-[1]  p-2 shadow bg-base-100 rounded-box w-52 right-3">
                 <li className="cursor-text text-center">
                   <span className="font-bold">{user.displayName}</span>
                 </li>

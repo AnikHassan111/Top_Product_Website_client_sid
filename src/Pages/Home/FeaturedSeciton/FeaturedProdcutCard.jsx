@@ -47,8 +47,7 @@ const FeaturedProdcutCard = ({ product, refetche }) => {
           <h2 className="card-title">
             <Link to={`/prodcutdetais/${_id}`}> {name}</Link>
             <div className="badge badge-secondary">
-              {" "}
-              <FaVoteYea className="mr-2"></FaVoteYea>
+              <FaVoteYea className=""></FaVoteYea>
               {votes}
             </div>
           </h2>
