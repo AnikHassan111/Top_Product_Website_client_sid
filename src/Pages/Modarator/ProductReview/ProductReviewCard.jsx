@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { useState } from "react";
 
-const ProductReviewCard = ({ reviews, refetch }) => {
+const ProductReviewCard = ({ reviews, refetch, index }) => {
   const axiisSecure = useAxiosSecureApi();
   const [productAccpectorReject, setProductAccpectorReject] = useState(false);
   const {
@@ -93,7 +93,7 @@ const ProductReviewCard = ({ reviews, refetch }) => {
   };
   return (
     <tr key={reviews._id}>
-      <th>1</th>
+      <th>{index + 1}</th>
       <td>{reviews.name}</td>
       <td>
         <Link
@@ -103,8 +103,9 @@ const ProductReviewCard = ({ reviews, refetch }) => {
           Product Details
         </Link>
       </td>
-      <td className=" py-1 cursor-pointer   text-center w-10 mx-11 bg-slate-400 text-white rounded-lg">
-        Featured
+      <td>
+        {" "}
+        <button className="btn btn-neutral">Featured</button>
       </td>
       <td className=" py-1   w-10 mx-11 text-white rounded-lg"></td>
       <td

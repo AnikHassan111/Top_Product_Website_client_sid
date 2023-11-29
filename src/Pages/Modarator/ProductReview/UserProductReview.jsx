@@ -30,11 +30,12 @@ const UserProductReview = () => {
           </thead>
           <tbody className="">
             {/* row 1 */}
-            {userprodctReview.map((reviews) => (
+            {userprodctReview.map((reviews, index) => (
               <ProductReviewCard
                 key={reviews._id}
                 reviews={reviews}
                 refetch={refetch}
+                index={index}
               ></ProductReviewCard>
             ))}
           </tbody>
