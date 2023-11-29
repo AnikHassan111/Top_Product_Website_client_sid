@@ -12,33 +12,7 @@
     "description": "Flagship smartphone with cutting-edge features and powerful performance.",
     "externalLink": "https://example.com/product1"
   },
-  {
-    "trending": false,
-    "report": false,
-    "featured": false,
-    "review": [],
-    "status": "",
-    "img": "https://i.ibb.co/j4B2mmP/hikarinoshita-hikari-1-Omr2-Y0sj-U8-unsplash.jpg",
-    "name": "Fujifilm X-T4",
-    "tags": ["camera", "photography", "technology"],
-    "votes": 20,
-    "description": "APS-C mirrorless camera with in-body stabilization, 240fps slow-motion video, and retro design.",
-    "externalLink": "https://example.com/product-fujifilm-x-t4"
-  },
 
-  {
-    "trending": false,
-    "report": false,
-    "featured": true,
-    "review": [],
-    "status": "",
-    "img": "https://i.ibb.co/hF0hkLv/varad-murti-Gx-Wwj-Oj-J5-Ss-unsplash.jpg",
-    "name": "Sony WH-1000XM4",
-    "tags": ["audio", "headphones", "technology"],
-    "votes": 25,
-    "description": "Wireless noise-canceling headphones with industry-leading sound quality and long battery life.",
-    "externalLink": "https://example.com/product-sony-wh-1000xm4"
-  },
   {
     "trending": true,
     "report": false,

@@ -2,9 +2,41 @@ import { useQuery } from "@tanstack/react-query";
 import useAxiosSecureApi from "../../../Hooks/axiosSecureapi/useAxiosSecureApi";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { useState } from "react";
 
-const ProductReviewCard = ({ review, refetch }) => {
+const ProductReviewCard = ({ reviews, refetch }) => {
   const axiisSecure = useAxiosSecureApi();
+  const [productAccpectorReject, setProductAccpectorReject] = useState(false);
+  const {
+    featured,
+    review,
+    report,
+    status,
+    img,
+    name,
+    tags,
+    votes,
+    description,
+    externalLink,
+    ownerName,
+    ownerEmail,
+    ownerImg,
+  } = reviews;
+  const productojb = {
+    featured,
+    review,
+    report,
+    status,
+    img,
+    name,
+    tags,
+    votes,
+    description,
+    externalLink,
+    ownerName,
+    ownerEmail,
+    ownerImg,
+  };
 
   const handleAccpect = (id) => {
     const updateObj = {
@@ -14,11 +46,22 @@ const ProductReviewCard = ({ review, refetch }) => {
       .patch(`/userProductstatusUpdate/${id}`, updateObj)
       .then((res) => {
         if (res.data.modifiedCount > 0) {
-          Swal.fire({
-            title: "Accpect",
-            text: "Accpect this Product",
-            icon: "success",
-          });
+          setProductAccpectorReject(true);
+
+          axiisSecure
+            .post("/userproductAddMaindatabase", productojb)
+            .then((ress) => {
+              if (res.data.insertedId) {
+                Swal.fire({
+                  title: "Accpect",
+                  text: "Accpect this Product",
+                  icon: "success",
+                });
+              }
+            })
+            .catch((err) => {
+              console.log(err);
+            });
         }
         refetch();
       })
@@ -26,14 +69,35 @@ const ProductReviewCard = ({ review, refetch }) => {
         console.log(err);
       });
   };
-  console.log(review);
+  const handleReject = (id) => {
+    const updateObj = {
+      statuss: " Rejected",
+    };
+    axiisSecure
+      .patch(`/userProductstatusUpdate/${id}`, updateObj)
+      .then((res) => {
+        if (res.data.modifiedCount > 0) {
+          Swal.fire({
+            title: "Reject",
+            text: "Reject this Product",
+            icon: "success",
+          });
+          console.log(res);
+          setProductAccpectorReject(true);
+        }
+        refetch();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
-    <tr key={review._id}>
+    <tr key={reviews._id}>
       <th>1</th>
-      <td>{review.name}</td>
+      <td>{reviews.name}</td>
       <td>
         <Link
-          to={`/userprodcutdetais/${review._id}`}
+          to={`/userprodcutdetais/${reviews._id}`}
           className="px-2 py-1 bg-slate-400 text-white rounded-lg"
         >
           Product Details
@@ -44,14 +108,26 @@ const ProductReviewCard = ({ review, refetch }) => {
       </td>
       <td className=" py-1   w-10 mx-11 text-white rounded-lg"></td>
       <td
-        onClick={() => handleAccpect(review._id)}
-        className="px-2 py-1 text-center   cursor-pointer bg-green-500 text-white rounded-lg"
+        onClick={() => handleAccpect(reviews._id)}
+        className="px-2 py-1 text-center di   cursor-pointer  rounded-lg"
       >
-        Accpect
+        {productAccpectorReject ? (
+          <button className="btn btn-neutral" disabled>
+            Accpect
+          </button>
+        ) : (
+          <button className="btn btn-neutral">Accpect</button>
+        )}
       </td>
       <td className=" py-1   text-center   w-10 mx-11 text-white rounded-lg"></td>
-      <td className="px-2 py-1 cursor-pointer  text-center  bg-red-500 text-white rounded-lg">
-        Reject
+      <td onClick={() => handleReject(reviews._id)} className="">
+        {productAccpectorReject ? (
+          <button className="btn btn-neutral" disabled>
+            Reject
+          </button>
+        ) : (
+          <button className="btn btn-neutral">Reject</button>
+        )}
       </td>
     </tr>
   );

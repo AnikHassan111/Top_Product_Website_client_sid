@@ -1,6 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecureApi from "../../../Hooks/axiosSecureapi/useAxiosSecureApi";
-import { Link } from "react-router-dom";
 import ProductReviewCard from "./ProductReviewCard";
 
 const UserProductReview = () => {
@@ -31,10 +30,10 @@ const UserProductReview = () => {
           </thead>
           <tbody className="">
             {/* row 1 */}
-            {userprodctReview.map((review) => (
+            {userprodctReview.map((reviews) => (
               <ProductReviewCard
-                key={review._id}
-                review={review}
+                key={reviews._id}
+                reviews={reviews}
                 refetch={refetch}
               ></ProductReviewCard>
             ))}
