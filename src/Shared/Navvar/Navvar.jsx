@@ -91,7 +91,7 @@ const Navvar = () => {
                 </li>
                 <li>
                   <Link
-                    to={"/dashboard/myprofile"}
+                    to={"/dashboard"}
                     className="btn btn-neutral w-full mt-2"
                   >
                     Dashboard

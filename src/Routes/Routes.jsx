@@ -13,6 +13,9 @@ import AddProduct from "../Pages/Dashboard/AddProduct/AddProduct";
 import MyProduct from "../Pages/Dashboard/MyProduct/MyProduct";
 import ProductUpdate from "../Pages/Product/ProductUpdate/ProductUpdate";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import ManageUser from "../Pages/Dashboard/ManageUser/ManageUser";
+import ReporatedContent from "../Pages/Modarator/ReporatedContent/ReporatedContent";
+import UserProductReview from "../Pages/Modarator/ProductReview/UserProductReview";
 
 const router = createBrowserRouter([
   {
@@ -73,6 +76,18 @@ const router = createBrowserRouter([
       {
         path: "myProductUpdate/:id",
         element: <ProductUpdate></ProductUpdate>,
+      },
+      {
+        path: "magageUser",
+        element: <ManageUser></ManageUser>,
+      },
+      {
+        path: "reporatedContent",
+        element: <ReporatedContent></ReporatedContent>,
+      },
+      {
+        path: "productReview",
+        element: <UserProductReview></UserProductReview>,
       },
     ],
   },

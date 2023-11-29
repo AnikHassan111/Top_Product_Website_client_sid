@@ -8,7 +8,7 @@ const Login = () => {
   const { singIn } = useAuth();
   const location = useLocation();
 
-  const goto = location.state.pathname || "/";
+  const goto = location.state?.pathname || "/";
   const navigate = useNavigate();
   const {
     register,

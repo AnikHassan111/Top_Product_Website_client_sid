@@ -11,7 +11,6 @@ const FeaturedSection = () => {
       return res.data;
     },
   });
-  console.log("featured item", featuredSectionData);
   return (
     <div className="grid grid-cols-4 gap-2 my-10">
       {featuredSectionData.map((prodcut) => (

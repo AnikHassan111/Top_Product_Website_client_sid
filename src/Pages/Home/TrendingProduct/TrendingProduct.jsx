@@ -14,7 +14,6 @@ const TrendingProduct = () => {
       return res.data;
     },
   });
-  console.log("trandign", tranding);
   return (
     <div>
       <Sesctiontitle heading={"Trending Products"}></Sesctiontitle>

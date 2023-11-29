@@ -3,9 +3,11 @@ import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import Swal from "sweetalert2";
 import GoogleLogin from "../../ComPonent/GoogleLogin/GoogleLogin";
+import useAxiosSecureApi from "../../Hooks/axiosSecureapi/useAxiosSecureApi";
 
 const Register = () => {
   const { createuser, profile } = useAuth();
+  const axiosSecure = useAxiosSecureApi();
   const navigate = useNavigate();
   const {
     register,
@@ -26,6 +28,19 @@ const Register = () => {
               text: "User created successfull",
               icon: "success",
             });
+            const userRole = {
+              email: data.email,
+              name: data.name,
+              role: "",
+            };
+            axiosSecure
+              .post("/userRole", userRole)
+              .then((res) => {
+                console.log(res);
+              })
+              .catch((err) => {
+                console.log(err);
+              });
             reset();
             navigate("/");
           })
@@ -143,7 +158,7 @@ const Register = () => {
 
             <input
               type="submit"
-              className="px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600"
+              className="px-8 cursor-pointer py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600"
               value={"SingUp"}
             />
           </div>
