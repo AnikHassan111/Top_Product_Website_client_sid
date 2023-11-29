@@ -25,7 +25,7 @@ const GoogleLogin = ({ goto }) => {
   };
   return (
     <div>
-      <button onClick={handleGoogle} className="btn btn-outline">
+      <button onClick={handleGoogle} className="btn btn-outline cursor-pointer">
         <FaGoogle /> Google
       </button>
     </div>
