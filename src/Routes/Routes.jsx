@@ -16,6 +16,7 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import ManageUser from "../Pages/Dashboard/ManageUser/ManageUser";
 import ReporatedContent from "../Pages/Modarator/ReporatedContent/ReporatedContent";
 import UserProductReview from "../Pages/Modarator/ProductReview/UserProductReview";
+import UserProductDetails from "../Pages/Modarator/ProductReview/UserProductDetails";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <ProductDetails></ProductDetails>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "userprodcutdetais/:id",
+        element: (
+          <PrivateRoute>
+            <UserProductDetails></UserProductDetails>
           </PrivateRoute>
         ),
       },
