@@ -42,6 +42,7 @@ const ProductReviewCard = ({ reviews, refetch, index }) => {
     const updateObj = {
       statuss: " Accepted",
     };
+
     axiisSecure
       .patch(`/userProductstatusUpdate/${id}`, updateObj)
       .then((res) => {

@@ -72,7 +72,7 @@ const Navvar = () => {
           </div>
           <Link to={"/"}>
             <div className="w-12 h-12 rounded-full ml-32 md:ml-72 lg:ml-0  overflow-hidden">
-              <img src={logo} className="w-12  " alt="" />
+              <img src={logo} className="w-12 h-12 " alt="" />
             </div>
           </Link>
         </div>
@@ -83,7 +83,11 @@ const Navvar = () => {
           {user ? (
             <div className="dropdown">
               <div tabIndex={0} className=" w-10 h-10 cursor-pointer">
-                <img src={user.photoURL} className="rounded-full" alt="" />
+                <img
+                  src={user.photoURL}
+                  className="rounded-full h-10 w-10"
+                  alt=""
+                />
               </div>
               <ul className="dropdown-content z-[1]  p-2 shadow bg-base-100 rounded-box w-52 right-3">
                 <li className="cursor-text text-center">

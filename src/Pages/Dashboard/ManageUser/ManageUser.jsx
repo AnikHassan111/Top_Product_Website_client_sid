@@ -5,6 +5,7 @@ import ManageUsersCard from "./ManageUsersCard";
 
 const ManageUser = () => {
   const axiosSecure = useAxiosSecureApi();
+
   const { user } = useAuth();
   const { data: allusers, refetch } = useQuery({
     queryKey: ["allusers"],
@@ -13,6 +14,7 @@ const ManageUser = () => {
       return res.data;
     },
   });
+  const filter = allusers?.filter((usr) => usr.email != user.email);
   return (
     <div>
       <div className="p-12">
@@ -29,7 +31,7 @@ const ManageUser = () => {
               </tr>
             </thead>
             <tbody className="">
-              {allusers?.map((user, index) => (
+              {filter?.map((user, index) => (
                 <ManageUsersCard
                   user={user}
                   key={index}

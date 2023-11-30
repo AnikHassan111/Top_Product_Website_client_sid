@@ -24,17 +24,14 @@ const ProductDetails = () => {
 
   const {
     _id,
-    trending,
-    report,
-    featured,
+
     review,
-    status,
+
     img,
     name,
     tags,
     votes,
     description,
-    externalLink,
   } = productDetails;
 
   const handleVoteClick = (id) => {
@@ -44,10 +41,9 @@ const ProductDetails = () => {
       const obj = {
         newVote,
       };
-      axisoPublic
+      axiosSecure
         .patch(`/updateFeaturedVote/${id}`, obj)
         .then((res) => {
-          console.log(res);
           if (res.data.modifiedCount > 0) {
             Swal.fire({
               title: "Your Vote Granted",
@@ -82,8 +78,7 @@ const ProductDetails = () => {
         console.log(err);
       });
   };
-  //   console.log(Object.keys(productDetails).join(","));
-  console.log(review);
+
   return (
     <div className="max-w-7xl mx-auto pt-20 pb-14">
       <div className="hero ">

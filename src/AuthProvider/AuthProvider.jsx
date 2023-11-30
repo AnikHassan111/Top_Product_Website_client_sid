@@ -9,10 +9,12 @@ import {
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../FireBase/Firebase.config";
+import useAxiosPublicApi from "../Hooks/axiosPublicapi/useAxiosPublicApi";
 
 export const ContextApi = createContext(null);
 
 const AuthProvider = ({ children }) => {
+  const axiosPublic = useAxiosPublicApi();
   const googleProvider = new GoogleAuthProvider();
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -44,11 +46,20 @@ const AuthProvider = ({ children }) => {
       setLoading(false);
       setUser(currentUser);
       console.log("user", currentUser);
+      const email = { email: currentUser?.email };
+      if (currentUser) {
+        axiosPublic.post("/jwt", email).then((res) => {
+          console.log(res);
+          localStorage.setItem("token", res.data.token);
+        });
+      } else {
+        localStorage.removeItem("token");
+      }
     });
     return () => {
       unSubscribe();
     };
-  }, []);
+  }, [axiosPublic]);
 
   const authValue = {
     user,

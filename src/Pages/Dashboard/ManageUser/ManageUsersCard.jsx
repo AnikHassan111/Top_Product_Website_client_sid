@@ -7,10 +7,10 @@ const ManageUsersCard = ({ user, index, refetch }) => {
   const { _id, email, name, role } = user;
   const axiosSecure = useAxiosSecureApi();
 
-  const handleRoleChange = (roles) => {
+  const handleRoleChange = (role) => {
     const userEmail = {
       email: user?.email,
-      roles,
+      role: role,
     };
     axiosSecure
       .patch(`/changeUserRole`, userEmail)
@@ -67,7 +67,7 @@ const ManageUsersCard = ({ user, index, refetch }) => {
       </td>
 
       <td className="text-sm cursor-pointer">
-        {user.roles ? user.roles : <FaUser></FaUser>}
+        {user.role ? user.role : <FaUser></FaUser>}
       </td>
       <td className="cursor-pointer" onClick={() => handleDelete(_id)}>
         <FaTrash className="text-red-500"> </FaTrash>

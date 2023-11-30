@@ -17,6 +17,7 @@ import ManageUser from "../Pages/Dashboard/ManageUser/ManageUser";
 import ReporatedContent from "../Pages/Modarator/ReporatedContent/ReporatedContent";
 import UserProductReview from "../Pages/Modarator/ProductReview/UserProductReview";
 import UserProductDetails from "../Pages/Modarator/ProductReview/UserProductDetails";
+import AdminStaticPage from "../Hooks/IsAdmin/AdminStaticPage";
 
 const router = createBrowserRouter([
   {
@@ -89,6 +90,10 @@ const router = createBrowserRouter([
       {
         path: "magageUser",
         element: <ManageUser></ManageUser>,
+      },
+      {
+        path: "adminStaticPage",
+        element: <AdminStaticPage></AdminStaticPage>,
       },
       {
         path: "reporatedContent",

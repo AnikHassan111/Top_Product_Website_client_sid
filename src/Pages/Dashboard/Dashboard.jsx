@@ -1,28 +1,32 @@
-import {
-  FaBox,
-  FaCartPlus,
-  FaHome,
-  FaMemory,
-  FaProductHunt,
-  FaReact,
-  FaUsers,
-} from "react-icons/fa";
+import { FaBox, FaCartPlus, FaChartPie, FaHome, FaUsers } from "react-icons/fa";
 import { MdOutlineReviews, MdReportProblem } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { NavLink, Outlet } from "react-router-dom";
+import useIsAdmin from "../../Hooks/IsAdmin/IsAdmin";
+import { useState } from "react";
 
 const Dashboard = () => {
-  const isAdmin = false;
-  const isModeratro = true;
+  const [Adminstatus] = useIsAdmin();
+
+  console.log("admin backend", Adminstatus?.isAdmin);
+
+  const isAdmin = Adminstatus?.isAdmin == "Admin";
+  const isModeratro = Adminstatus?.isAdmin == "Moderator";
+
   return (
     <div className="flex max-w-7xl mx-auto ">
-      <div className="bg-blue-800 w-72 min-h-screen text-white   ">
+      <div className="bg-blue-800 w-80 min-h-screen text-white   ">
         <ul className="menu py-5 px-8 ">
           {isAdmin ? (
             <>
               <li>
                 <NavLink to={"/dashboard/magageUser"}>
                   <FaUsers></FaUsers> Mangae User
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to={"/dashboard/adminStaticPage"}>
+                  <FaChartPie></FaChartPie> Admin Statistics Page
                 </NavLink>
               </li>
             </>

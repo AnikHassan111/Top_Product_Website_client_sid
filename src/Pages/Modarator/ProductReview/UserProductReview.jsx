@@ -11,7 +11,6 @@ const UserProductReview = () => {
       return res.data;
     },
   });
-  console.log(userprodctReview);
 
   return (
     <div className="p-14">
