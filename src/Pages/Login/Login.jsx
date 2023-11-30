@@ -18,10 +18,8 @@ const Login = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
     singIn(data.email, data.password)
       .then((res) => {
-        console.log(res);
         Swal.fire({
           title: " success",
           text: "Login Successfull",

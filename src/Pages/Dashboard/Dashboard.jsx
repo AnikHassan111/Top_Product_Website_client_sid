@@ -8,8 +8,6 @@ import { useState } from "react";
 const Dashboard = () => {
   const [Adminstatus] = useIsAdmin();
 
-  console.log("admin backend", Adminstatus?.isAdmin);
-
   const isAdmin = Adminstatus?.isAdmin == "Admin";
   const isModeratro = Adminstatus?.isAdmin == "Moderator";
 

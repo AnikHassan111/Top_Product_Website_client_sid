@@ -28,12 +28,10 @@ const ProductReview = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log("review", data);
     const name = user?.name;
     const review = data.review;
     const rating = data.rating;
     const photo = user?.photoURL;
-    console.log(name, review, rating, photo);
 
     const reviewObj = {
       name,
@@ -46,7 +44,6 @@ const ProductReview = () => {
     axiosSecure
       .patch(`/updateReview/${id}`, allreview)
       .then((res) => {
-        console.log(res);
         if (res.data.modifiedCount > 0) {
           Swal.fire({
             title: "Review",
@@ -62,7 +59,6 @@ const ProductReview = () => {
         console.log(err);
       });
   };
-  console.log(user?.displayName);
 
   return (
     <div>

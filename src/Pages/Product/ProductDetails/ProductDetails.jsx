@@ -37,7 +37,6 @@ const ProductDetails = () => {
   const handleVoteClick = (id) => {
     if (user) {
       const newVote = votes + 1;
-      console.log(typeof newVote);
       const obj = {
         newVote,
       };
@@ -65,7 +64,6 @@ const ProductDetails = () => {
     axiosSecure
       .patch(`/reportProduct/${_id}`)
       .then((res) => {
-        console.log(res);
         if (res.data.modifiedCount > 0) {
           Swal.fire({
             title: "Report",

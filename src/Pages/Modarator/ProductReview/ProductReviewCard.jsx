@@ -46,13 +46,13 @@ const ProductReviewCard = ({ reviews, refetch, index }) => {
     axiisSecure
       .patch(`/userProductstatusUpdate/${id}`, updateObj)
       .then((res) => {
+        console.log(res.data);
         if (res.data.modifiedCount > 0) {
           setProductAccpectorReject(true);
-
           axiisSecure
             .post("/userproductAddMaindatabase", productojb)
             .then((ress) => {
-              if (res.data.insertedId) {
+              if (ress.data.insertedId) {
                 Swal.fire({
                   title: "Accpect",
                   text: "Accpect this Product",
@@ -83,7 +83,6 @@ const ProductReviewCard = ({ reviews, refetch, index }) => {
             text: "Reject this Product",
             icon: "success",
           });
-          console.log(res);
           setProductAccpectorReject(true);
         }
         refetch();

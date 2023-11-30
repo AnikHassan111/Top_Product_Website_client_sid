@@ -13,7 +13,6 @@ const useIsAdmin = () => {
       return res.data;
     },
   });
-  console.log("admin", Adminstatus);
   return [Adminstatus];
 };
 

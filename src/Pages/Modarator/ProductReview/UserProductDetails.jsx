@@ -37,19 +37,15 @@ const UserProductDetails = () => {
     externalLink,
   } = userproductDetails;
 
-  console.log("userproduct", userproductDetails);
-
   const handleVoteClick = (id) => {
     if (user) {
       const newVote = votes + 1;
-      console.log(typeof newVote);
       const obj = {
         newVote,
       };
       axisoPublic
         .patch(`/updateFeaturedVote/${id}`, obj)
         .then((res) => {
-          console.log(res);
           if (res.data.modifiedCount > 0) {
             Swal.fire({
               title: "Your Vote Granted",
@@ -71,7 +67,6 @@ const UserProductDetails = () => {
     axiosSecure
       .patch(`/reportProduct/${_id}`)
       .then((res) => {
-        console.log(res);
         if (res.data.modifiedCount > 0) {
           Swal.fire({
             title: "Report",
@@ -84,7 +79,6 @@ const UserProductDetails = () => {
         console.log(err);
       });
   };
-  //   console.log(Object.keys(productDetails).join(","));
 
   return (
     <div className="max-w-7xl mx-auto pt-20 pb-14">

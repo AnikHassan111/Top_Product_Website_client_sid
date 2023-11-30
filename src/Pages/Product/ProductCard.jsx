@@ -13,14 +13,12 @@ const ProdcutCard = ({ product, refetche }) => {
   const handleVoteClick = (id) => {
     if (user) {
       const newVote = votes + 1;
-      console.log(typeof newVote);
       const obj = {
         newVote,
       };
       axisoPublic
         .patch(`/updateFeaturedVote/${id}`, obj)
         .then((res) => {
-          console.log(res);
           if (res.data.modifiedCount > 0) {
             Swal.fire({
               title: "Your Vote Granted",

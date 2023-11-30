@@ -9,7 +9,6 @@ const Footer = () => {
     axisoPublic
       .get("/weblogo")
       .then((res) => {
-        // console.log(res.data[0].image);
         setLogo(res.data[0].image);
       })
       .catch((err) => {

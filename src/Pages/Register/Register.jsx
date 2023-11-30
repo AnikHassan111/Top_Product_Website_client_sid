@@ -18,7 +18,6 @@ const Register = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
     createuser(data.email, data.password)
       .then((res) => {
         profile(data.name, data.photourl)
@@ -35,9 +34,7 @@ const Register = () => {
             };
             axiosSecure
               .post("/userRole", userRole)
-              .then((res) => {
-                console.log(res);
-              })
+              .then((res) => {})
               .catch((err) => {
                 console.log(err);
               });

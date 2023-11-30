@@ -34,7 +34,6 @@ const ProductUpdate = () => {
       description: data?.Description,
       externalLink: data?.ExternalLinks,
     };
-    console.log(updateProduct);
     axiosSecure
       .patch(`/ownerProductUpdate/${id}`, updateProduct)
       .then((res) => {

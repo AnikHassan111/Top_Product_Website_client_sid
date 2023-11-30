@@ -24,7 +24,6 @@ const useAxiosSecureApi = () => {
       return response;
     },
     async (err) => {
-      console.log("Error", err.response.status);
       const status = err.response.status;
 
       if (status == 401 || status == 403) {

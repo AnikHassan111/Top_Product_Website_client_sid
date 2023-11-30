@@ -10,7 +10,6 @@ const GoogleLogin = ({ goto }) => {
   const handleGoogle = () => {
     googleLogin()
       .then((res) => {
-        console.log(res.user.displayName);
         const userRole = {
           email: res.user.email,
           name: res.user.displayName,
@@ -18,9 +17,7 @@ const GoogleLogin = ({ goto }) => {
         };
         axiosSecure
           .post("/userRole", userRole)
-          .then((res) => {
-            console.log(res);
-          })
+          .then((res) => {})
           .catch((err) => {
             console.log(err);
           });
