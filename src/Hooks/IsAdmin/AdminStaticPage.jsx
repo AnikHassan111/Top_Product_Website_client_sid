@@ -5,15 +5,14 @@ import useAxiosSecureApi from "../axiosSecureapi/useAxiosSecureApi";
 
 const AdminStaticPage = () => {
   const axiosSecure = useAxiosSecureApi();
-  const { data: prodcutCount } = useQuery({
+  const { data: prodcutCount = [] } = useQuery({
     queryKey: ["productCount"],
     queryFn: async () => {
       const res = await axiosSecure.get("/getProductCount");
       return res.data;
     },
   });
-  console.log(prodcutCount[0]);
-  console.log(prodcutCount[1]);
+
   return (
     <div className="py-16 px-24">
       <PieChart
